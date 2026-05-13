@@ -1,4 +1,4 @@
-<img width="1674" height="77" alt="image" src="https://github.com/user-attachments/assets/6d6c5cbe-5824-4eae-bff9-8ad042653289" /># Diffusion Sampling Optimization Lab (Student Template)
+
 
 This lab provides an implementation framework to demonstrate and optimize the denoising iterations ("sampling steps") within Diffusion Models using Bayesian Optimization (BO). 
 
@@ -59,7 +59,7 @@ You can customize testing parameters:
 如果遇到 HuggingFace 下载卡顿甚至断网的情况，可以提前将离线模型下载好，然后在代码中进行本地加载。
 - 国内镜像仓库地址:https://www.modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/files
 - v1-5-pruned-emaonly.safetensors（这个文件大概4.27GB）
-
+<img width="1674" height="77" alt="image" src="https://github.com/user-attachments/assets/6d6c5cbe-5824-4eae-bff9-8ad042653289" /># Diffusion Sampling Optimization Lab (Student Template)
 #### 如何使用离线文件？
 1. 从上述地址将该仓库里的所有文件克隆/下载到你的电脑中（或通过学校机房内网传包），一般需要下载所有 `.json` 配置文件和 `weight.bin`/`safetensors` 文件，放在一个你自己新建的 `stable-diffusion-v1-5` 文件夹里。
 2. 打开 `diffusion_model.py` 文件，把原来的在线名字 `"runwayml/stable-diffusion-v1-5"` 替换为你刚保存的那个文件夹的绝对路径。
