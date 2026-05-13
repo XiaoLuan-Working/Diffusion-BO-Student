@@ -55,4 +55,14 @@ You can customize testing parameters:
 目标函数（Object Function）考虑了多目标权衡：
 > **Score = Sharpness (质量) - λ * Inference_Time (耗时惩罚)**
 由于一次完整的 Diffusion 前向推进极其慢，Grid Search 或 Random Search 代价太高，贝叶斯优化可以在非常少的目标函数评估（大概十几轮之内）的代价下，定位最高效的最优采样步数值。
+### (可选) 本地模型权重导入加载方式
+如果遇到 HuggingFace 下载卡顿甚至断网的情况，可以提前将离线模型下载好，然后在代码中进行本地加载。
+- 官方仓库地址 (需要魔法): https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main
+- 国内镜像仓库地址: https://hf-mirror.com/runwayml/stable-diffusion-v1-5/tree/main
+
+#### 如何使用离线文件？
+1. 从上述地址将该仓库里的所有文件克隆/下载到你的电脑中（或通过学校机房内网传包），一般需要下载所有 `.json` 配置文件和 `weight.bin`/`safetensors` 文件，放在一个你自己新建的 `stable-diffusion-v1-5` 文件夹里。
+2. 打开 `diffusion_model.py` 文件，把原来的在线名字 `"runwayml/stable-diffusion-v1-5"` 替换为你刚保存的那个文件夹的绝对路径。
+   例如：`model_id = "/绝对路径/到你的/stable-diffusion-v1-5/"`
+
 
