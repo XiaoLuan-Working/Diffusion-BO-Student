@@ -58,7 +58,7 @@ You can customize testing parameters:
 ### (可选) 本地模型权重导入加载方式
 如果遇到 HuggingFace 下载卡顿甚至断网的情况，可以提前将离线模型下载好，然后在代码中进行本地加载。
 - 国内镜像仓库地址:https://www.modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/files
-v1-5-pruned-emaonly.safetensors（这个文件大概4.27GB）
+- v1-5-pruned-emaonly.safetensors（这个文件大概4.27GB）
 
 #### 如何使用离线文件？
 1. 从上述地址将该仓库里的所有文件克隆/下载到你的电脑中（或通过学校机房内网传包），一般需要下载所有 `.json` 配置文件和 `weight.bin`/`safetensors` 文件，放在一个你自己新建的 `stable-diffusion-v1-5` 文件夹里。
