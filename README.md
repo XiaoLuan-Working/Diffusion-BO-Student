@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ```
 
 *(GPU is auto-detected. Run `pip install accelerate` if `low_cpu_mem_usage` issues occur during model loading.)*
-
+如果没有GPU记得把参数调小，要不然电脑运行会很慢
 ## 实验任务 (Lab Tasks)
 
 本实验分为两个递进的任务阶段，请编辑 `main.py` 并在终端运行来观察结果。
@@ -55,3 +55,4 @@ You can customize testing parameters:
 目标函数（Object Function）考虑了多目标权衡：
 > **Score = Sharpness (质量) - λ * Inference_Time (耗时惩罚)**
 由于一次完整的 Diffusion 前向推进极其慢，Grid Search 或 Random Search 代价太高，贝叶斯优化可以在非常少的目标函数评估（大概十几轮之内）的代价下，定位最高效的最优采样步数值。
+
